@@ -1,0 +1,19 @@
+{
+  "name": "stateman",
+  "version": "0.2.0",
+  "main": "src/index.js",
+  "description": "A tiny foundation that providing nested state-based routing for complex web application.",
+  "keywords": [
+    "router",
+    "state",
+    "spa"
+  ],
+  "scripts": [
+    "src/index.js",
+    "src/browser.js",
+    "src/histery.js",
+    "src/state.js",
+    "src/stateman.js",
+    "src/util.js"
+  ]
+}

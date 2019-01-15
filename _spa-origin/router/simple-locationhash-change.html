@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <title>Index</title>
+    <style>
+        * {
+            font-family: sans-serif;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+
+<a href="#fun">This link points to #fun</a>
+
+<script>
+    var defaultTemplate = '<a href="#fun">This link points to #fun</a>'
+    var funTemplate = '<div><button>Hey, a Back button!</button></div>'
+
+    function goBack() {
+        location.hash = '#back';
+    }
+
+    function datHash() {
+
+        if (location.hash === '#fun') {
+            document.body.innerHTML =
+                'location.hash === ' + location.hash
+                + funTemplate
+
+            var elBack = document.querySelector('button');
+                elBack.addEventListener('click', goBack);
+        } else {
+            // 默认视图
+            document.body.innerHTML = defaultTemplate;
+        }
+
+    }
+
+    window.addEventListener('hashchange', datHash);
+
+    // if (window.addEventListener) {
+    //     window.addEventListener('hashchange', datHash);
+    // }
+    // else {
+    //     window.attachEvent('onhashchange', datHash);
+    // }
+</script>
+</body>
+</html>

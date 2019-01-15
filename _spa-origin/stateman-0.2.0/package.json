@@ -1,0 +1,63 @@
+{
+  "name": "stateman",
+  "version": "0.2.0",
+  "description": "A tiny foundation that providing nested state-based routing for complex web application.",
+  "keywords": [
+    "router",
+    "state",
+    "spa"
+  ],
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:leeluolee/stateman"
+  },
+  "scripts": {
+    "test": "gulp travis --phantomjs"
+  },
+  "author": {
+    "name": "leeluolee",
+    "email": "oe.zheng@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leeluolee/stateman/issues"
+  },
+  "homepage": "https://github.com/leeluolee/stateman",
+  "devDependencies": {
+    "expect.js": "^0.3.1",
+    "gulp": "^3.8.10",
+    "gulp-bump": "^0.1.10",
+    "gulp-gh-pages": "^0.5.2",
+    "gulp-git": "^1.4.0",
+    "gulp-jshint": "~1.5.3",
+    "gulp-mocha": "~0.4.1",
+    "gulp-prompt": "^0.1.1",
+    "gulp-run-sequence": "^0.3.2",
+    "gulp-shell": "^0.2.4",
+    "gulp-tag-version": "^1.0.2",
+    "gulp-uglify": "~0.2.1",
+    "gulp-util": "~2.2.14",
+    "gulp-webpack": "^0.3.0",
+    "karma": "~0.12.6",
+    "karma-chrome-launcher": "~0.1.4",
+    "karma-commonjs": "0.0.12",
+    "karma-coverage": "~0.2.4",
+    "karma-firefox-launcher": "~0.1.3",
+    "karma-ie-launcher": "~0.1.5",
+    "karma-mocha": "~0.1.3",
+    "karma-phantomjs-launcher": "~0.1.4",
+    "mocha": "~1.18.2",
+    "through2": "~0.4.1",
+    "yargs": "^1.3.1"
+  },
+  "spm": {
+    "main": "src/index.js",
+    "ignore": [
+      "docs",
+      "example",
+      "scripts",
+      "test"
+    ]
+  }
+}

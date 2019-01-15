@@ -6,11 +6,13 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link href="https://cdn.bootcss.com/tailwindcss/0.7.3/utilities.min.css" rel="stylesheet">
+
 </head>
 <body>
 
 
-<input data-bind="value" vname="sex" value="男" style="display: inline;">
+<input class="inline" data-bind="value" vname="sex" value="男">
 <input data-bind="value" vname="sex" value="男" data-share="value" style="display: inline;">
 
 <div data-share="html" vname="sex"></div>
@@ -20,8 +22,13 @@
 <script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
 <script>
     ;(function ($) {
+
         BindSysnc.pt = BindSysnc.prototype;
+
+        // 初始化
         BindSysnc.pt.init = function (selector) {
+
+            // data-bind
             var $allBinds = $(selector).find("[data-bind]");
             var $container = $("<div class='data-bind-contanier'></div>");
             var data = {};
@@ -30,6 +37,7 @@
                 var oldElement = $($allBinds[bindIndex]);
                 var bindElement = oldElement.clone(true);
                 var convertElement = $container.clone(true);
+
                 convertElement.css("display", oldElement.css("display"));
                 convertElement.append(bindElement);
 
@@ -47,6 +55,7 @@
                 convertElement.insertAfter(oldElement);
                 oldElement.remove();
             }
+
             this.data = data;
             this.isAutoShare = false;
             var that = this;
@@ -96,7 +105,6 @@
          * 定时模拟器
          *
          * @version 2017-03-01
-         *
          * @returns
          */
         function TimerSimulator(task, times, name) {
@@ -129,6 +137,7 @@
                 that.taskId = setTimeout(function () {
                     that.start();
                 }, that.times);
+
                 if (that.task != null && typeof that.task === "function") {
                     that.task(that.counter);
                 }
@@ -159,9 +168,12 @@
         var b = $B("body");
         b.data.sex = 111;
         b.startAutoShare();
+
+        // 相当于nextTick??
         setTimeout(function () {
             b.data.sex = 123124124;
-        }, 22000);
+        }, 5000);
+
     })
     //=====================================
 </script>
