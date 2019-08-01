@@ -1,0 +1,9 @@
+/node_modules/
+/.idea/
+/.cache/
+yarn-error.log
+.ignore/
+packages/.fre/
+demo/**/node_modules/
+demo/**/.cache/
+demo/**/dist/
