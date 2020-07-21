@@ -22,7 +22,7 @@
   "devDependencies": {
     "babel-core": "^6.17.0",
     "babel-preset-avalon": "^1.0.0",
-    "codecov": "^1.0.1",
+    "codecov": "^3.7.1",
     "es3ify": "^0.2.2",
     "karma": "^0.12.37",
     "karma-chrome-launcher": "^0.1.2",
